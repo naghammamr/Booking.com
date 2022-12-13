@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Smoke Test Suite">
+    <parameter/>
+    <test name="Booking Test" preserve-order="true">
+        <classes>
+            <class name="tests.HomePageTests"/>
+            <class name="tests.SearchResultsPageTests"/>
+            <class name="tests.BookingDetailsPageTests"/>
+            <class name="tests.ConfirmationPageTests"/>
+            <methods>
+                <include name=""/>
+            </methods>
+        </classes>
+    </test>
+</suite>
