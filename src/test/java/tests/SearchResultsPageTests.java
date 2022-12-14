@@ -8,7 +8,8 @@ public class SearchResultsPageTests extends BaseTests {
     SearchResultsPage searchResultsPage;
 
     @Test
-    public void xxx() {
+    public void userCanSeeAvailabilityForSpecificHotel() {
         searchResultsPage = new SearchResultsPage(driver);
+        searchResultsPage.availabilityButton("Tolip Hotel Alexandria").click();
     }
 }

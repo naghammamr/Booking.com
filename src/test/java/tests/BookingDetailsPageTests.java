@@ -8,8 +8,11 @@ public class BookingDetailsPageTests extends BaseTests {
     BookingDetailsPage bookingDetailsPage;
 
     @Test
-    public void xx() {
+    public void userCanReserveRoom() {
         bookingDetailsPage = new BookingDetailsPage(driver);
+        bookingDetailsPage.selectBed();
+        bookingDetailsPage.selectRoomsAndAmountDropDownLocator(1);
+        bookingDetailsPage.confirmReservationButton().click();
     }
 
 }
