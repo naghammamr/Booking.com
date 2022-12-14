@@ -18,13 +18,13 @@ public class HomePageTests extends BaseTests {
         return ER.getDataFromExcel();
     }
 
-    @Test
-    public void userCanSearchPerSelectedLocationAndDates() {
+    @Test(dataProvider = "ExcelData")
+    public void userCanSearchPerSelectedLocationAndDates(String location, String month/*, String checkInDay, String checkOutDay*/) {
         homePage = new HomePage(driver);
-        homePage.setLocation("Alexandria");
+        homePage.setLocation(location);
         homePage.getCheckInDayButton().click();
-        homePage.selectDay("January", "1");
-        homePage.selectDay("January", "14");
+        homePage.selectDay(month, "1");
+        homePage.selectDay(month, "14");
         homePage.getSearchButton().click();
     }
 

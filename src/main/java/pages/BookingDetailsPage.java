@@ -14,7 +14,9 @@ public class BookingDetailsPage {
 
     private By bedRadioBtnLocator = By.xpath("//tr//td//div[@class='rt-bed-type-select']//input");
     private By selectRoomsAndAmountDropDownLocator = By.xpath("//tr//td//div[@class='hprt-block']//select");
-    private By confirmReservationBtnLocator = By.id("b_tt_holder_2");
+    private By confirmReservationBtnLocator = By.xpath("//div[@class='hprt-reservation-cta']//button");
+    private By checkInDateLocator = By.xpath("//div[@data-placeholder='Check-in']");
+    private By checkOutDateLocator = By.xpath("//div[@data-placeholder='Check-out']");
 
     public void selectBed() {
         driver.findElement(bedRadioBtnLocator).click();
@@ -27,6 +29,14 @@ public class BookingDetailsPage {
 
     public WebElement confirmReservationButton() {
         return driver.findElement(confirmReservationBtnLocator);
+    }
+
+    public WebElement getCheckInDate() {
+        return driver.findElement(checkInDateLocator);
+    }
+
+    public WebElement getCheckOutDate() {
+        return driver.findElement(checkOutDateLocator);
     }
 
 }

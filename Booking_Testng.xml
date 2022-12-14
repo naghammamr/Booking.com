@@ -5,6 +5,11 @@
             <class name="tests.HomePageTests"/>
             <class name="tests.SearchResultsPageTests"/>
             <class name="tests.BookingDetailsPageTests"/>
+            <methods>
+                <include name="userSearchIsCorrect"/>
+                <include name="userCanReserveRoom"/>
+            </methods>
+            <class name="tests.SearchResultsPageTests"/>
         </classes>
     </test>
 </suite>
