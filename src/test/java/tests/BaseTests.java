@@ -19,12 +19,12 @@ public class BaseTests {
         System.setProperty("webdriver.chrome.driver", chromePath);
         driver = new ChromeDriver(option);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(270));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
         driver.navigate().to("https://www.booking.com/");
     }
 
 
-    @AfterSuite(enabled = false)
+    @AfterSuite(enabled = true)
     public void stopDriver() {
         driver.quit();
     }

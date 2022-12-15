@@ -13,13 +13,13 @@ public class HomePageTests extends BaseTests {
     HomePage homePage;
 
     @DataProvider(name = "ExcelData")
-    public Object[][] userRegisterData() throws IOException {
+    public Object[][] reservationData() throws IOException {
         ExcelReader ER = new ExcelReader();
         return ER.getDataFromExcel();
     }
 
     @Test(dataProvider = "ExcelData")
-    public void userCanSearchPerSelectedLocationAndDates(String location, String month/*, String checkInDay, String checkOutDay*/) {
+    public void userCanSearchPerSelectedLocationAndDates(String location, String month) {
         homePage = new HomePage(driver);
         homePage.setLocation(location);
         homePage.getCheckInDayButton().click();
